@@ -22,11 +22,11 @@ const Banner = () => {
           software—all in one place. Start creating faster today. <br /> Explore
           Products
         </p>
-        <div className='flex gap-4 items-center '>
-          <button className="bg-gradient-to-r cursor-pointer  from-[#4F39F6] to-[#9514FA] rounded-full text-white font-semibold p-4">
+        <div className="flex gap-4 items-center ">
+          <button className="bg-gradient-to-r  from-[#4F39F6] to-[#9514FA] rounded-full text-white font-semibold p-4  cursor-pointer">
             Explore Products
           </button>
-          <button className='flex justify-center items-center btn btn-primary btn-outline p-6 rounded-full'>
+          <button className="flex justify-center items-center btn btn-primary btn-outline p-6 rounded-full">
             <img src={play} alt="" /> Watch Demo
           </button>
         </div>
