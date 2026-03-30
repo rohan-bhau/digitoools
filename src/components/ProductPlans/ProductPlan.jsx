@@ -3,13 +3,13 @@ import FeaturesCard from './FeaturesCard'
 import portfolio from '../../../src/assets/products/portfolio.png';
 
 const ProductPlan = ({ product }) => {
-    console.log(product);
+    // console.log(product);
     const {name, tag, price, period, icon, tagType, description, features} = product;
     
     // console.log(productData);
     
   return (
-    <div className="border text-left border-[#f2f2f2] space-y-4 rounded-xl w-[380px] mt-10 p-4 shadow mb-5">
+    <div className="border text-left border-[#f2f2f2] space-y-4 rounded-xl w-[380px] mt-10 p-4 shadow mb-5 container mx-auto">
       <div className="flex justify-end">
         <button className="btn rounded-full">{tag}</button>
       </div>
