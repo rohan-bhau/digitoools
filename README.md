@@ -1,16 +1,38 @@
-# React + Vite
+# A-6 Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔹 Project Description
+This is a **Digital Tools Buying Website** built with React.js and Tailwind CSS, following the Figma design provided in the assignment. Users can browse products, view features, add items to the cart, and proceed to checkout. The website is fully responsive across devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Site
+Check the live website here: [https://digitoools.netlify.app/](https://digitoools.netlify.app/)
 
-## React Compiler
+## 📂 GitHub Repository
+Project repository link: [https://github.com/rohan-bhau/digitoools](https://github.com/rohan-bhau/digitoools)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Technologies Used
+- **React.js** – Front-end framework
+- **Tailwind CSS & DaisyUI** – Styling and UI components
+- **JavaScript (ES6+)** – Logic and interactivity
+- **React-Toastify** – Toast notifications for actions
+- **JSON** – Product data storage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+1. **Navbar** – Includes a cart icon that dynamically updates the count of selected products.
+2. **Product Section** – Displays products in a 3-column layout, each card showing name, description, price, features, and a "Buy Now" button.
+3. **Cart Functionality** – Allows users to view selected products, remove items, and clear the cart with a “Proceed to Checkout” button.
+4. **Pricing Section** – Displays plans and highlights the most popular one. Users can select and activate plans with clear visual feedback.
+5. **Responsive Design** – Fully responsive across mobile, tablet, and desktop devices.
+6. **React-Toastify Notifications** – Shows alerts when products are added to the cart, removed, or checkout is processed.
+
+---
+
+## 🎯 Optional / Extra Features
+- "Buy Now" button changes to “Added to Cart” after clicking.
+- Total product count updates in the Navbar dynamically.
+- Toast notifications improve user feedback for interactions.
