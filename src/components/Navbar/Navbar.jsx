@@ -1,10 +1,10 @@
 import { ShoppingCart } from 'lucide-react';
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({cartCount, setCartCount}) => {
   return (
-    <div className="  bg-base-100 shadow-sm">
-      <div className='flex justify-between items-center container mx-auto py-4'>
+    <div className="  bg-base-100 shadow-sm fixed top-0 z-10 w-full">
+      <div className="flex justify-between items-center container mx-auto py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,19 +29,19 @@ const Navbar = () => {
               className=" menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 p-2 shadow"
             >
               <li className="hover:text-orange-500">
-                <a href="#">Products</a>
+                <a href="">Products</a>
               </li>
               <li className="hover:text-orange-500">
-                <a href="#">Features</a>
+                <a href="">Features</a>
               </li>
               <li className="hover:text-orange-500">
-                <a href="#">Pricing</a>
+                <a href="">Pricing</a>
               </li>
               <li className="hover:text-orange-500">
-                <a href="#">Testimonials</a>
+                <a href="">Testimonials</a>
               </li>
               <li className="hover:text-orange-500">
-                <a href="#">FAQ</a>
+                <a href="">FAQ</a>
               </li>
             </ul>
           </div>
@@ -55,24 +55,26 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu-horizontal gap-8 px-1">
             <li className="hover:text-orange-500">
-              <a href="#">Products</a>
+              <a href="">Products</a>
             </li>
             <li className="hover:text-orange-500">
-              <a href="#">Features</a>
+              <a href="">Features</a>
             </li>
             <li className="hover:text-orange-500">
-              <a href="#">Pricing</a>
+              <a href="">Pricing</a>
             </li>
             <li className="hover:text-orange-500">
-              <a href="#">Testimonials</a>
+              <a href="">Testimonials</a>
             </li>
             <li className="hover:text-orange-500">
-              <a href="#">FAQ</a>
+              <a href="">FAQ</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <ShoppingCart className="cursor-pointer hover:text-orange-400" />
+          <div className='relative'>
+            <ShoppingCart className="cursor-pointer hover:text-orange-400" /> <p className={`${cartCount === 0? "hidden":""} absolute -top-3 left-3 bg-red-500 p-1 h-4 w-4 text-xs flex items-center justify-center mx-auto rounded-full`}>{ cartCount}</p>
+          </div>
           <button className="hover:text-orange-500 cursor-pointer">
             Log In
           </button>

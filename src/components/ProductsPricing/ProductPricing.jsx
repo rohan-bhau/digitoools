@@ -1,12 +1,11 @@
 import React, { use } from 'react'
 import PricingCard from './PricingCard';
 
-const ProductPricing = ({ pricingPromise }) => {
-    // console.log(pricingPromise);
-    const pricingData = use(pricingPromise)
-    // console.log(pricingData);
-    
-    
+const ProductPricing = ({ pricingPromise}) => {
+  // console.log(pricingPromise);
+  const pricingData = use(pricingPromise);
+  // console.log(pricingData);
+
   return (
     <div>
       <div className="container mx-auto p-20">
@@ -19,7 +18,10 @@ const ProductPricing = ({ pricingPromise }) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 container mx-auto">
         {pricingData.map((data, idx) => (
-          <PricingCard key={idx} data={data}></PricingCard>
+          <PricingCard
+            key={idx}
+            data={data}
+          ></PricingCard>
         ))}
       </div>
     </div>

@@ -9,25 +9,26 @@ import ProductPricing from "./components/ProductsPricing/ProductPricing";
 import WorkFlow from "./components/Workflow/WorkFlow";
 import Footer from "./components/Footer/Footer";
 
-const fetchProduct = async() => {
-  const res = await fetch("/data.json")
-  return res.json()
-}
+const fetchProduct = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+};
 
 const fetchPricing = async () => {
-  const res = await fetch("/pricingData.json")
-  return res.json()
-}
+  const res = await fetch("/pricingData.json");
+  return res.json();
+};
 
 const App = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const [cartData, setCartData] = useState([])
   const productPromise = fetchProduct();
-  const pricingPromise = fetchPricing()
+  const pricingPromise = fetchPricing();
   // console.log(pricingPromise);
-  
-  
+
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar cartCount={cartCount} setCartCount={setCartCount}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
 
@@ -36,7 +37,13 @@ const App = () => {
           <span className="loading loading-spinner text-success"></span>
         }
       >
-        <ProductPlans productPromise={productPromise}></ProductPlans>
+        <ProductPlans
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+          cartData={cartData}
+          setCartData={setCartData}
+          productPromise={productPromise}
+        ></ProductPlans>
       </Suspense>
 
       <Promotion></Promotion>

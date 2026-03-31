@@ -1,9 +1,9 @@
 import React from 'react'
 import FeatureCard from './FeatureCard';
 
-const PricingCard = ({ data }) => {
-    console.log(data.most_popular_tag);
-    
+const PricingCard = ({ data,}) => {
+  // console.log(data.most_popular_tag);
+
   return (
     <div className="bg-[#f2f2f2] p-6 mb-6 rounded-lg shadow space-y-6 relative flex flex-col justify-between">
       <h2
